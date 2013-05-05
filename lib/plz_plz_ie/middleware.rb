@@ -2,7 +2,7 @@ module PlzPlzIE
   class Middleware
     IEVR = /(?:MSIE)[\/ ]?([0-9.]+)/i
 
-    def initialize(app,options)
+    def initialize(app,options={})
       @app = app
       @lastest = options[:lastest] || 9
       @template = options[:path] || File.expand_path("../templates/plz_plz_ie.html", __FILE__)
